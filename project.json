@@ -7,17 +7,17 @@
     "Microsoft.Activities.Extensions": "[2.0.6.9]",
     "Newtonsoft.Json": "[13.0.1]",
     "UiPath.Credentials.Activities": "[1.1.6479.13204]",
-    "UiPath.Excel.Activities": "[2.7.2]",
-    "UiPath.Mail.Activities": "[1.7.2]",
-    "UiPath.System.Activities": "[22.4.1]",
-    "UiPath.UIAutomation.Activities": "[19.11.4]",
-    "UiPath.WebAPI.Activities": "[1.4.4]"
+    "UiPath.Excel.Activities": "[2.12.3]",
+    "UiPath.Mail.Activities": "[1.15.2]",
+    "UiPath.System.Activities": "[22.4.4]",
+    "UiPath.UIAutomation.Activities": "[22.4.7]",
+    "UiPath.WebAPI.Activities": "[1.11.1]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "19.10.8.0",
-  "projectVersion": "1.0.27",
+  "projectVersion": "1.0.28",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

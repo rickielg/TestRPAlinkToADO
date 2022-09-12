@@ -8,7 +8,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>897,4286</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>936,4449</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>VAL_API_RetrieveRating_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="25">
@@ -61,6 +61,9 @@
       <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
@@ -69,7 +72,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Sequence DisplayName="VAL_API_RetrieveRating" sap:VirtualizedContainerService.HintSize="877,4226" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="VAL_API_RetrieveRating" sap:VirtualizedContainerService.HintSize="877,4384" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="scoreResult" />
       <Variable x:TypeArguments="x:Int32" Name="scoreStatusCode" />
@@ -102,22 +105,22 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:LogMessage>
-    <TryCatch DisplayName="Try to Score Policy (API)" sap:VirtualizedContainerService.HintSize="835,3872" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try to Score Policy (API)" sap:VirtualizedContainerService.HintSize="835,4030" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="Score Policy" sap:VirtualizedContainerService.HintSize="422,1538" sap2010:WorkflowViewState.IdRef="Sequence_6">
+        <Sequence DisplayName="Score Policy" sap:VirtualizedContainerService.HintSize="515,1671" sap2010:WorkflowViewState.IdRef="Sequence_6">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Sequence DisplayName="Parse Policy Info" sap:VirtualizedContainerService.HintSize="380,700" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Parse Policy Info" sap:VirtualizedContainerService.HintSize="473,702" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[CDate(in_TransactionItem.SpecificContent(&quot;PolicyEffectiveDate&quot;).ToString).ToString(&quot;yyyy-MM-dd&quot;)]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="431,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[CDate(in_TransactionItem.SpecificContent(&quot;PolicyEffectiveDate&quot;).ToString).ToString(&quot;yyyy-MM-dd&quot;)]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -125,7 +128,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <Assign sap:VirtualizedContainerService.HintSize="338,60" sap2010:WorkflowViewState.IdRef="Assign_9">
+            <Assign sap:VirtualizedContainerService.HintSize="431,60" sap2010:WorkflowViewState.IdRef="Assign_9">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
               </Assign.To>
@@ -133,7 +136,7 @@
                 <InArgument x:TypeArguments="x:String">[If(String.IsNullOrEmpty(in_TransactionItem.SpecificContent("PrimaryNamedInsured").ToString),String.empty,in_TransactionItem.SpecificContent("PrimaryNamedInsured").ToString)]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="338,377" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+            <ui:MultipleAssign DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="431,379" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="16">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -226,7 +229,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
           </Sequence>
-          <Assign sap:VirtualizedContainerService.HintSize="380,60" sap2010:WorkflowViewState.IdRef="Assign_8">
+          <Assign sap:VirtualizedContainerService.HintSize="473,60" sap2010:WorkflowViewState.IdRef="Assign_8">
             <Assign.To>
               <OutArgument x:TypeArguments="x:String">[policyReference]</OutArgument>
             </Assign.To>
@@ -234,7 +237,7 @@
               <InArgument x:TypeArguments="x:String">[policyReference.padleft(10,CChar(“0”))]</InArgument>
             </Assign.Value>
           </Assign>
-          <Sequence DisplayName="TEMP - Adjust Json Headers in queue" sap:VirtualizedContainerService.HintSize="380,252" sap2010:WorkflowViewState.IdRef="Sequence_4">
+          <Sequence DisplayName="TEMP - Adjust Json Headers in queue" sap:VirtualizedContainerService.HintSize="473,252" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -258,7 +261,8 @@
               </Assign.Value>
             </Assign>
           </Sequence>
-          <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" AcceptFormat="JSON" Body="[&quot;{&quot;&quot;score&quot;&quot;: {&quot;&quot;inputs&quot;&quot;: { &quot;&quot;insured&quot;&quot;: {&quot;&quot;agency&quot;&quot;: &quot;&quot;&quot; + agencyID + &quot;&quot;&quot;,&quot;&quot;available_history_1&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;available_history_2&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;available_history_3&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;insured_name&quot;&quot;: &quot;&quot;&quot; + name + &quot;&quot;&quot;,&quot;&quot;new_renew_flag&quot;&quot;: &quot;&quot;N&quot;&quot;, &quot;&quot;original_policy_term_number&quot;&quot;: &quot;&quot;&quot; + policyReference + &quot;&quot;&quot;,&quot;&quot;policy_address&quot;&quot;: &quot;&quot;&quot; + address + &quot;&quot;&quot;,&quot;&quot;policy_city_name&quot;&quot;: &quot;&quot;&quot; + city + &quot;&quot;&quot;,&quot;&quot;policy_state_code&quot;&quot;: &quot;&quot;&quot; + state + &quot;&quot;&quot;,&quot;&quot;policy_zip_code&quot;&quot;: &quot;&quot;&quot; + zip + &quot;&quot;&quot;,&quot;&quot;term_effective_date&quot;&quot;: &quot;&quot;&quot;+ policyEffectiveDate + &quot;&quot;&quot;,&quot;&quot;underwriter&quot;&quot;: &quot;&quot;&quot; + underwriter + &quot;&quot;&quot;,&quot;&quot;class&quot;&quot;: &quot; + classCodes + &quot;,&quot;&quot;state&quot;&quot;: &quot; + mods + &quot; }}}}&quot;]" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request - Scoring" EndPoint="https://insureright.valen.com/api/2/document/insureright/scoring" sap:VirtualizedContainerService.HintSize="380,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Password="[new System.Net.NetworkCredential(string.Empty, in_ValenPassword).Password]" ResponseHeaders="[scoreHeader]" Result="[scoreResult]" StatusCode="[scoreStatusCode]" TimeoutMS="6000" Username="[in_ValenUsername]">
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="473,91" sap2010:WorkflowViewState.IdRef="LogMessage_9" Level="Info" Message="[&quot;{&quot;&quot;score&quot;&quot;: {&quot;&quot;inputs&quot;&quot;: { &quot;&quot;insured&quot;&quot;: {&quot;&quot;agency&quot;&quot;: &quot;&quot;&quot; + agencyID + &quot;&quot;&quot;,&quot;&quot;available_history_1&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;available_history_2&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;available_history_3&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;insured_name&quot;&quot;: &quot;&quot;&quot; + name + &quot;&quot;&quot;,&quot;&quot;new_renew_flag&quot;&quot;: &quot;&quot;N&quot;&quot;, &quot;&quot;original_policy_term_number&quot;&quot;: &quot;&quot;&quot; + policyReference + &quot;&quot;&quot;,&quot;&quot;policy_address&quot;&quot;: &quot;&quot;&quot; + address + &quot;&quot;&quot;,&quot;&quot;policy_city_name&quot;&quot;: &quot;&quot;&quot; + city + &quot;&quot;&quot;,&quot;&quot;policy_state_code&quot;&quot;: &quot;&quot;&quot; + state + &quot;&quot;&quot;,&quot;&quot;policy_zip_code&quot;&quot;: &quot;&quot;&quot; + zip + &quot;&quot;&quot;,&quot;&quot;term_effective_date&quot;&quot;: &quot;&quot;&quot;+ policyEffectiveDate + &quot;&quot;&quot;,&quot;&quot;underwriter&quot;&quot;: &quot;&quot;&quot; + underwriter + &quot;&quot;&quot;,&quot;&quot;class&quot;&quot;: &quot; + classCodes + &quot;,&quot;&quot;state&quot;&quot;: &quot; + mods + &quot; }}}}&quot;]" />
+          <ui:HttpClient ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" ResourcePath="{x:Null}" AcceptFormat="JSON" Body="[&quot;{&quot;&quot;score&quot;&quot;: {&quot;&quot;inputs&quot;&quot;: { &quot;&quot;insured&quot;&quot;: {&quot;&quot;agency&quot;&quot;: &quot;&quot;&quot; + agencyID + &quot;&quot;&quot;,&quot;&quot;available_history_1&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;available_history_2&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;available_history_3&quot;&quot;: &quot;&quot;N&quot;&quot;,&quot;&quot;insured_name&quot;&quot;: &quot;&quot;&quot; + name + &quot;&quot;&quot;,&quot;&quot;new_renew_flag&quot;&quot;: &quot;&quot;N&quot;&quot;, &quot;&quot;original_policy_term_number&quot;&quot;: &quot;&quot;&quot; + policyReference + &quot;&quot;&quot;,&quot;&quot;policy_address&quot;&quot;: &quot;&quot;&quot; + address + &quot;&quot;&quot;,&quot;&quot;policy_city_name&quot;&quot;: &quot;&quot;&quot; + city + &quot;&quot;&quot;,&quot;&quot;policy_state_code&quot;&quot;: &quot;&quot;&quot; + state + &quot;&quot;&quot;,&quot;&quot;policy_zip_code&quot;&quot;: &quot;&quot;&quot; + zip + &quot;&quot;&quot;,&quot;&quot;term_effective_date&quot;&quot;: &quot;&quot;&quot;+ policyEffectiveDate + &quot;&quot;&quot;,&quot;&quot;underwriter&quot;&quot;: &quot;&quot;&quot; + underwriter + &quot;&quot;&quot;,&quot;&quot;class&quot;&quot;: &quot; + classCodes + &quot;,&quot;&quot;state&quot;&quot;: &quot; + mods + &quot; }}}}&quot;]" BodyFormat="application/json" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request - Scoring" EndPoint="https://insureright.valen.com/api/2/document/insureright/scoring" sap:VirtualizedContainerService.HintSize="473,22" sap2010:WorkflowViewState.IdRef="HttpClient_1" Method="POST" Password="[new System.Net.NetworkCredential(string.Empty, in_ValenPassword).Password]" ResponseHeaders="[scoreHeader]" Result="[scoreResult]" StatusCode="[scoreStatusCode]" TimeoutMS="6000" Username="[in_ValenUsername]">
             <ui:HttpClient.Attachments>
               <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
             </ui:HttpClient.Attachments>
@@ -275,7 +279,7 @@
               <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
             </ui:HttpClient.UrlSegments>
           </ui:HttpClient>
-          <Sequence DisplayName="Parse Scoring Response" sap:VirtualizedContainerService.HintSize="380,252" sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Sequence DisplayName="Parse Scoring Response" sap:VirtualizedContainerService.HintSize="473,252" sap2010:WorkflowViewState.IdRef="Sequence_5">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -302,10 +306,10 @@
         </Sequence>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="801,441" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="801,466" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -313,7 +317,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Catch Scoring Error" sap:VirtualizedContainerService.HintSize="376,372" sap2010:WorkflowViewState.IdRef="Sequence_7">
+            <Sequence DisplayName="Catch Scoring Error" sap:VirtualizedContainerService.HintSize="376,397" sap2010:WorkflowViewState.IdRef="Sequence_7">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -328,7 +332,7 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </ui:LogMessage>
-              <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke PC_UnderwriterAssign workflow" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PolicyCenter\PC_UnderwriterAssign.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke PC_UnderwriterAssign workflow" sap:VirtualizedContainerService.HintSize="334,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="PolicyCenter\PC_UnderwriterAssign.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="ui:QueueItem" x:Key="in_TransactionItem">[in_TransactionItem]</InArgument>
                 </ui:InvokeWorkflowFile.Arguments>
