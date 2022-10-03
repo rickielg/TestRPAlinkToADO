@@ -17,11 +17,6 @@ steps:
     orchestratorConnection: 'UiPath.Orchestrator'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
 
-- task: UiPathTest@2
-  inputs:
-    testTarget: 'TestProject'
-    orchestratorConnection: 'UiPath.Orchestrator'
-    folderName: 'Shared'
 
 - task: PublishBuildArtifacts@1
   inputs:
