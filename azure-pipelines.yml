@@ -12,10 +12,12 @@ pool:
 steps:
 - task: UiPathPack@2
   inputs:
-    versionType: 'CurrentVersion'
+    versionType: 'AutoVersion'
     projectJsonPath: '$(Build.SourcesDirectory)'
-    orchestratorConnection: 'UiPath.Orchestrator'
+    outputType: 'Process'
+    orchestratorConnection: 'UIPath Cloud'
     outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+    traceLevel: 'Information'
 
 
 - task: PublishBuildArtifacts@1
