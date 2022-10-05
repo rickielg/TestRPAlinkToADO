@@ -6,22 +6,29 @@
 trigger:
 - main
 
+variables:
+    group: Dev
+
 pool:
   vmImage: windows-latest
 
-steps:
-- task: UiPathPack@2
-  inputs:
-    versionType: 'AutoVersion'
-    projectJsonPath: '$(Build.SourcesDirectory)'
-    outputType: 'Process'
-    orchestratorConnection: 'UIPath Cloud'
-    outputPath: '$(Build.ArtifactStagingDirectory)\Output'
-    traceLevel: 'Information'
+stages: 
+    - stage: Build
+      displayName: Build Package
+      jobs:
+      - job: BuildPackage
+        steps:
+        - task: UiPathPack@2
+          inputs:
+            versionType: 'AutoVersion'
+            projectJsonPath: '$(Build.SourcesDirectory)'
+            outputType: 'Process'
+            orchestratorConnection: 'UIPath Cloud'
+            outputPath: '$(Build.ArtifactStagingDirectory)\Output'
+            traceLevel: 'Information'
 
-
-- task: PublishBuildArtifacts@1
-  inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    ArtifactName: 'Test'
-    publishLocation: 'Container'
+        - task: PublishBuildArtifacts@1
+          inputs:
+            PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+            ArtifactName: 'Test'
+            publishLocation: 'Container'
