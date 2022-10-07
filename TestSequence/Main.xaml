@@ -95,7 +95,7 @@
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UiElementExists DisplayName="Element Exists 'INPUT  login'" Exists="[login]" sap:VirtualizedContainerService.HintSize="579,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
+                  <ui:UiElementExists DisplayName="Element Exists 'INPUT  login 2'" Exists="[login]" sap:VirtualizedContainerService.HintSize="579,106" sap2010:WorkflowViewState.IdRef="UiElementExists_2">
                     <ui:UiElementExists.Target>
                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" InformativeScreenshot="7f0b7ad0675840b0f2ed2618847e0ded" Selector="&lt;html title='Hastings Mutual | Centralized Agency Database' /&gt;&lt;webctrl aaname='Log Off' parentid='hmi-layout-frame' tag='A' /&gt;">
                         <ui:Target.TimeoutMS>
