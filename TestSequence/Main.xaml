@@ -109,7 +109,7 @@
                   </ui:UiElementExists>
                   <If Condition="[login = True]" sap:VirtualizedContainerService.HintSize="579,238" sap2010:WorkflowViewState.IdRef="If_4">
                     <If.Then>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Login Successful&quot;]" />
+                      <ui:LogMessage DisplayName="Log Messages" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Login Successful&quot;]" />
                     </If.Then>
                     <If.Else>
                       <Throw Exception="[New SystemException(&quot;login Failed)&quot;)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_1" />
