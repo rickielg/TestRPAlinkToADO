@@ -26,7 +26,7 @@
     "executionType": "Workflow"
   },
   "designOptions": {
-    "projectProfile": "Developement",
+    "projectProfile": "Developements",
     "outputType": "Process",
     "libraryOptions": {
       "includeOriginalXaml": false,
